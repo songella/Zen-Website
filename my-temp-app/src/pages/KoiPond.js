@@ -111,34 +111,49 @@ const KoiPond = () => {
                 {/* Navigation */}
                 <div style={{
                     position: 'fixed',
-                    top: '20px',
-                    right: '20px',
+                    top: '30px',
+                    right: '30px',
                     zIndex: 1000,
                 }}>
                     <Link to="/" style={{
-                        color: '#0c4a6e',
+                        color: 'rgba(12, 74, 110, 0.7)',
                         textDecoration: 'none',
-                        fontSize: '18px',
-                        padding: '8px 16px',
-                        background: 'rgba(255,255,255,0.2)',
-                        borderRadius: '8px',
-                    }}>
-                        Back to Words
+                        fontSize: '14px',
+                        padding: '10px 20px',
+                        background: 'rgba(255,255,255,0.3)',
+                        backdropFilter: 'blur(10px)',
+                        borderRadius: '20px',
+                        border: '1px solid rgba(255,255,255,0.4)',
+                        fontWeight: '300',
+                        letterSpacing: '0.5px',
+                        transition: 'all 0.3s ease',
+                    }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.background = 'rgba(255,255,255,0.5)';
+                            e.currentTarget.style.color = '#0c4a6e';
+                        }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.background = 'rgba(255,255,255,0.3)';
+                            e.currentTarget.style.color = 'rgba(12, 74, 110, 0.7)';
+                        }}>
+                        floating words
                     </Link>
                 </div>
-
                 <h1 style={{
-                    fontSize: '2.5rem',
-                    fontWeight: 300,
-                    color: '#0c4a6e',
-                    marginBottom: '8px',
+                    fontSize: '3rem',
+                    fontWeight: 200,
+                    color: 'rgba(12, 74, 110, 0.8)',
+                    marginBottom: '12px',
+                    letterSpacing: '2px',
                 }}>
-                    Koi Pond
+                    koi pond
                 </h1>
                 <p style={{
-                    color: '#0369a1',
-                    fontSize: '0.875rem',
-                    marginBottom: '24px',
+                    color: 'rgba(3, 105, 161, 0.7)',
+                    fontSize: '0.9rem',
+                    marginBottom: '32px',
+                    fontWeight: '300',
+                    letterSpacing: '1px',
                 }}>
                     tap anywhere to add koi
                 </p>
@@ -148,8 +163,8 @@ const KoiPond = () => {
                         ref={canvasRef}
                         onClick={handleClick}
                         style={{
-                            width: '600px',
-                            height: '500px',
+                            width: '1100px',
+                            height: '600px',
                             cursor: 'pointer',
                             borderRadius: '24px',
                             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
@@ -162,8 +177,8 @@ const KoiPond = () => {
                     >
                         {/* Ripples */}
                         <svg
-                            width="600"
-                            height="500"
+                            width="1000"
+                            height="600"
                             style={{
                                 position: 'absolute',
                                 top: 0,

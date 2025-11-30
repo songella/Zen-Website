@@ -153,19 +153,30 @@ const FloatingWords = () => {
             {/* Navigation to Koi Pond */}
             <div style={{
                 position: 'fixed',
-                top: '20px',
-                right: '20px',
+                top: '30px',
+                right: '30px',
                 zIndex: 1000,
             }}>
                 <Link to="/koi-pond" style={{
-                    color: '#e6e6fa',
+                    color: 'rgba(230, 230, 250, 0.9)',
                     textDecoration: 'none',
-                    fontSize: '18px',
-                    padding: '8px 16px',
-                    background: 'rgba(255,255,255,0.2)',
-                    borderRadius: '8px',
-                }}>
-                    Koi Pond
+                    fontSize: '14px',
+                    padding: '10px 20px',
+                    background: 'rgba(255,255,255,0.15)',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    fontWeight: '300',
+                    letterSpacing: '0.5px',
+                    transition: 'all 0.3s ease',
+                }}
+                    onMouseOver={(e) => {
+                        e.currentTarget.style.background = 'rgba(255,255,255,0.25)';
+                    }}
+                    onMouseOut={(e) => {
+                        e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
+                    }}>
+                    koi pond
                 </Link>
             </div>
             {/* Floating Letters */}
