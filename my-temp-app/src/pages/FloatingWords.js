@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const FloatingWords = () => {
     const [inputValue, setInputValue] = useState('');
@@ -149,7 +150,24 @@ const FloatingWords = () => {
                     Forest
                 </button>
             </div>
-
+            {/* Navigation to Koi Pond */}
+            <div style={{
+                position: 'fixed',
+                top: '20px',
+                right: '20px',
+                zIndex: 1000,
+            }}>
+                <Link to="/koi-pond" style={{
+                    color: '#e6e6fa',
+                    textDecoration: 'none',
+                    fontSize: '18px',
+                    padding: '8px 16px',
+                    background: 'rgba(255,255,255,0.2)',
+                    borderRadius: '8px',
+                }}>
+                    Koi Pond
+                </Link>
+            </div>
             {/* Floating Letters */}
             {floatingLetters.map(letter => (
                 <div
